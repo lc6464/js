@@ -1,3 +1,4 @@
+// need jquery
 function getQueryString(k) {
     var l0 = location.search;
     if (l0 === "" || l0 === "?" || k === null) {
