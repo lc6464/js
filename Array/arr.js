@@ -1,5 +1,5 @@
-function isFn(func) {
-	return typeof func === "function"
+function isFn(fun) {
+	return typeof fun === "function"
 }
 
 function isArray(obj) {
