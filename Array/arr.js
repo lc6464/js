@@ -1,22 +1,22 @@
-function isFn(f) {
-    return typeof f === "function"
+function isFn(func) {
+	return typeof func === "function"
 }
 
-function isArray(o) {
-    if (typeof o !== "object" || o === null) {
-        return false;
-    }
-    if (isFn(Array.isArray)) {
-        return Array.isArray(o);
-    } else {
-        return Object.prototype.toString.call(o) === "[object Array]";
-    }
+function isArray(obj) {
+	if (typeof obj !== "object" || obj === null) {
+		return false;
+	}
+	if (isFn(Array.isArray)) {
+		return Array.isArray(obj);
+	} else {
+		return Object.prototype.toString.call(obj) === "[object Array]";
+	}
 }
 
-Array.append = function(a, v) {
-    if (!isArray(a)) {
-        return a;
-    }
-    a[a.length] = v;
-    return a;
+Array.append = function(arr, value) {
+	if (!isArray(arr)) {
+		return arr;
+	}
+	arr[arr.length] = value;
+	return arr;
 }
