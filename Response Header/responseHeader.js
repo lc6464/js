@@ -1,7 +1,10 @@
-function getResponseHeaders() {
+var response, responseHeaders;
+
+function reGetResponseHeaders() {
     var req = new XMLHttpRequest();
-    req.open('GET', document.location, false);
+    req.open('GET', location, false);
     req.send();
+    response = req;
     var headers = req.getAllResponseHeaders(),
         arr = headers.trim().split(/[\r\n]{1,2}/),
         headerMap = {};
@@ -11,8 +14,15 @@ function getResponseHeaders() {
             value = parts.join(': ');
         headerMap[header] = value;
     });
+    responseHeaders = headerMap;
     return headerMap;
 }
+reGetResponseHeaders();
+
+function getResponseHeaders() {
+    return responseHeaders;
+}
+
 function getResponseHeader(key) {
-    return getResponseHeaders()[key.toLowerCase()];
+    return response.getResponseHeader(key);
 }
