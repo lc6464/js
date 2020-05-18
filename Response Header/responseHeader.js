@@ -17,6 +17,7 @@ function reGetResponseHeaders() {
     responseHeaders = headerMap;
     return headerMap;
 }
+
 reGetResponseHeaders();
 
 function getResponseHeaders() {
