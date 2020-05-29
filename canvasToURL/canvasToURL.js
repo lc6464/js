@@ -14,6 +14,7 @@ function canvasToBlob(canvasElement, type, outputVariableName) {
         }
         eval(outputVariableName + ' = "' + url + '";');
     }, type, 1);
+    return outputVariableName;
 }
 
 function canvasToDataURL(canvasElement, type) {
@@ -39,4 +40,20 @@ function download(url, fileName) {
     a.download = fileName;
     a.click();
     return a;
+}
+
+function downloadCanvas(canvasElement, type, fileName) {
+    var types = ['webp', 'png', 'jpeg'],
+        t = types.indexOf(type),
+        url;
+    if (t >= 0) {
+        type = 'image/' + type;
+    } else {
+        type = 'image/webp';
+    }
+    canvasElement.toBlob(b = > {
+        url = URL.createObjectURL(b);
+        download(url, fileName);
+    }, type, 1);
+    return fileName;
 }
