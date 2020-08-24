@@ -1,5 +1,5 @@
-if (!Date.now) { Date.now = function () { return +new Date; }; }
-function Timer(time) { this.start = new Date(time == null ? Date.now() : time); }
+if (!Date.now) { Date.now = function () { return +new Date; }; } // ECMA-262 第五版标准中的 Date.now polyfill
+function Timer(time) { this.start = new Date(time == null ? Date.now() : time); } // 构造函数版本，相关注释请见 class 版本
 Timer.prototype.reset = function (time) { this.start = new Date(time == null ? Date.now() : time); };
 Timer.prototype.timing = function (time) {
 	this.time = new Date(time == null ? Date.now() : time);
