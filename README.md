@@ -1,6 +1,3 @@
-# js
-### JavaScript Code
-### JavaScript 代码
-- Store some JavaScript code written by LC.
-- 储存一些 LC 编写的 JavaScript 代码。
-> Copyright © 2019-2020 LC. All rights reserved.   LC 版权所有
+## JavaScript Code
+
+- 这是一些由 LC 编写的JavaScript函数，可以直接实现某些比较厉害的东东✨
