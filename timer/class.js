@@ -1,4 +1,3 @@
-if (!Date.now) { Date.now = function () { return +new Date; }; }
 class Timer {
 	constructor(time) { this.start = new Date(time == null ? Date.now() : time); }
 	reset(time) { this.start = new Date(time == null ? Date.now() : time); }
