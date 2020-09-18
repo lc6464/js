@@ -51,4 +51,4 @@
     - 参数：`time`
     - 处理：以参数 `time` 转换或执行时刻的 `Date` 对象设置/重设 `this.time`
     - 作用：计算 `this.base` 和 `this.time` 的间隔，用 `Math` 实现始终大减小
-    - 返回：`this.base` 和 `this.time` 的间隔，\[日,时,分,秒,毫秒\]
+    - 返回：`this.base` 和 `this.time` 的间隔，\[日,时,分,秒,毫秒,是否为倒计时\]
